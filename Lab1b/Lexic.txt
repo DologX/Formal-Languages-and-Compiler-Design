@@ -1,0 +1,34 @@
+Alphabet:
+a. Upper (A-Z) and lower (a-z) case letters of the English alphabet;
+b. Decimal digits (0-9);
+
+Lexic:
+a. Special symbols:
+- operators: = + - * / ^ < <= == <> >= >
+- separators: ( ) [ ] { } , ; @ %
+- reserved words: BEGIN END bool int real char string name input output if else for range
+
+b. Identifiers:
+- a sequence of letters and digits, such that the first character is a letter. The rule is:
+	identifier = letter , { ( letter | digit ) } ;
+	letter = "A" | "B" | ... | "Z" | "a" | "b" | … | "z" ;
+	digit = "0" | "1" | ... | "9" ;
+
+c. Constants
+1. Boolean:
+	boolean = "0" | "1"
+2. Integer:
+	integer = "+" , number | "-" , number | number | "0" ;
+	number = nonZeroDigit , { digit } ;
+	nonZeroDigit = "1" | ... | "9" ;
+3. Real:
+	real = integer , "." , digit , { digit }
+4. Character:
+	character = 'letter' | 'digit' ;
+5. String:
+	string = "arrayChar" ;
+	arrayChar = { ( letter | digit ) } ;
+6. Name:
+	name = "nameBase" ;
+	nameBase = uppercaseLetter , letter , { letter } ;
+	uppercaseLetter = "A" | "B" | ... | "Z" ;

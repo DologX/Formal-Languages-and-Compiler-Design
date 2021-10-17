@@ -1,0 +1,43 @@
+Predefined tokens are specified between " and ".
+
+Sintactical rules:
+
+program = declarationList , "BEGIN" , statementList , "END" ;
+
+declarationList = { declaration , ";" } ;
+
+declaration = type , "@" , identifier ;
+
+type = pureType | arrayDeclaration ;
+
+pureType = "bool" | "int" | "real" | "char" | "string" | "name";
+
+arrayDeclaration = pureType , "[" , number , "]" ;
+
+statementList = { statement , ";" } ;
+
+statement = simpleStatement | complexStatement ;
+
+simpleStatement = assignStatement | ioStatement ;
+
+assignStatement = identifier , [ "[" , number , "]" ] , "=" , expression ;
+
+expression = term | "(" , expression , aritmeticOperator , expression , ")";
+
+term = identifier | constant ;
+
+constant = boolean | integer | real | character | string | name ;
+
+aritmeticOperator = "+" | "-" | "*" | "/" | "^" ;
+
+ioStatement = ( "input" | "output" ) , "(" , identifier , ")" ;
+
+complexStatement = ifStatement | forStatement ;
+
+ifStatement = "if" , condition , "{" , statementList , "}" , [ "else" , "{" , statementList , "}" ] ;
+
+condition = "%" , expression , relationalOperator , expression , "%" ;
+
+relationalOperator = "<" | "<=" | "==" | "<>" | ">=" | ">" ;
+
+forStatement = "for" , "%" , identifier , "%" , "range" , "(" , ( integer | identifier ) , "," , ( integer | identifier ) , "," , integer , ")" , "{" , statementList , "}" ;
