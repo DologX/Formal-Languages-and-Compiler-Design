@@ -1,0 +1,24 @@
+real@a;
+real@b;
+real@c;
+real@delta;
+real@x1;
+real@x2;
+real@bNegative;
+real@deltaRoot;
+BEGIN
+input(a);
+input(b);
+input(c);
+delta = ( ( b ^ 2 ) - ( ( 4 * a ) * c ) );
+if %delta < 0% {output("NoSolutions");}
+else
+	{
+	bNegative = ( b - ( 2 * b ) );
+	deltaRoot = squareRoot(delta);
+	x1 = ( ( bNegative - deltaRoot ) / ( 2 * a ) );
+    x2 = ( ( bNegative + deltaRoot ) / ( 2 * a ) );
+	if %delta == 0% {output(x1);}
+    else {output(x1); output("and"); output(x2);};
+	};
+END

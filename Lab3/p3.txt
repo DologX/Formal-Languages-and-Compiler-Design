@@ -1,0 +1,14 @@
+int@n;
+int@inputNumber;
+int@index;
+int@sum;
+BEGIN
+input(n);
+sum = 0;
+for %index% range(0,n,1)
+{
+    input(inputNumber);
+    sum = ( sum + inputNumber );
+};
+output(sum);
+END

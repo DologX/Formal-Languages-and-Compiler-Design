@@ -1,0 +1,22 @@
+ST (Only Identifiers)
+Position --> Symbol
+
+17 --> bNegative 
+22 --> delta 
+42 --> deltaRoot 
+69 --> x1 
+70 --> x2 
+97 --> a 
+98 --> b 
+99 --> c 
+
+-----
+
+ST (Only Constants)
+Position --> Symbol
+
+33 --> "NoSolutions" 
+48 --> 0 
+50 --> 2 
+52 --> 4 
+75 --> "and" 
