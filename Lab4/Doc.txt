@@ -1,0 +1,40 @@
+https://github.com/DologX/Formal-Languages-and-Compiler-Design
+
+"""
+--- EBNF for FA.in ---
+
+faFile = states , "\n" , alphabet , "\n" , transitions , "\n" , initialState , "\n" , finalStates , "\n" ;
+
+states = { state , ";" } , state ;
+
+state = character , { character } ;
+
+character = ( letter | digit ) ;
+
+alphabet = { character , ";" } , character ;
+
+transitions = { transition , ";" } , transition ;
+
+transition = state , "," , character , "->" , { state , "," } , state ;
+
+initialState = state ;
+
+finalStates = states ;
+
+--- EBNF for FA.in end---
+
+--- Verify if a sequence is accepted by the DFA ---
+
+Description:
+
+True - means - "sequence is accepted by the DFA".
+False - means - "sequence is NOT accepted by the DFA".
+
+We will try to obtain an empty sequence, from the given sequence, by applying the allowed transitions in the following way:
+	- step 1: check if the first character in the sequence is in the alphabet
+	- step 2: check if there is one and only one transition of type delta(currentState, firstCharacter)
+	- step 3: if the first character passes the checks, apply the corresponding transition, otherwise return False
+If we end up with an empty sequnece and the current state is among final states, return True. Otherwise, return False
+
+--- Verify if a sequence is accepted by the DFA end---
+"""
